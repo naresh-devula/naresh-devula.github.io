@@ -33,7 +33,7 @@ env:
   # - 'redirect': Redirects the root URL to the PRIMARY_BRANCH.
   # - 'copy': Copies the contents of the PRIMARY_BRANCH to the root directory.
   # - 'move': Moves the contents of the PRIMARY_BRANCH to the root directory and removes it from its branch-specific URL.
-  # Here we default to 'move' so that naresh-ub.github.io/cvip/ loads the main book directly.
+  # Here we default to 'move' so that naresh-devula.github.io/cvip/ loads the main book directly.
   BEHAVIOR_PRIMARY: ${{ vars.BEHAVIOR_PRIMARY != '' && vars.BEHAVIOR_PRIMARY || 'move' }}
 
   # Release branch to custom url with an alias

@@ -8,7 +8,7 @@ only_build_toc_files: false
 
 html:
   favicon: "figures/TB_favicon.ico"
-  baseurl: "https://naresh-ub.github.io/"
+  baseurl: "https://naresh-devula.github.io/"
   extra_css:
     - "_static/color.css"
     - "_static/remotion-embed.css"
@@ -31,7 +31,7 @@ sphinx:
         text: Naresh Kumar Devulapally
         image_light: figures/naresh-ub.png
         image_dark: figures/naresh-ub.png
-      repository_url: "https://github.com/naresh-ub/naresh-ub.github.io"
+      repository_url: "https://github.com/naresh-devula/naresh-devula.github.io"
       path_to_docs: "book"
       repository_branch: "main"
       use_edit_page_button: false

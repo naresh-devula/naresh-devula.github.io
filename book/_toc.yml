@@ -10,9 +10,9 @@ parts:
     chapters:
       - file: course_notes/my-teaching-philosophy.ipynb
         title: "My Teaching Philosophy"
-      - url: https://naresh-ub.github.io/cvip-summer25
+      - url: https://naresh-devula.github.io/cvip-summer25
         title: "CSE 573: Computer Vision (UB, 2025)"
-      - url: https://naresh-ub.github.io/cvip-summer26
+      - url: https://naresh-devula.github.io/cvip-summer26
         title: "CSE 573: Computer Vision (UB, 2026)"
 
   - caption: "Invited Guest lectures"

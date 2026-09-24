@@ -52,7 +52,7 @@ My research focuses on **enhancing reliability, robustness and alignment in Gene
       </ul>
     </li>
     <li>
-      👨🏻‍🏫 Taught CSE 4/573: <a href="https://naresh-ub.github.io/cvip-summer25">Computer Vision and Image Processing</a> at UB, <strong>Summer 2025</strong>.
+      👨🏻‍🏫 Taught CSE 4/573: <a href="https://naresh-devula.github.io/cvip-summer25">Computer Vision and Image Processing</a> at UB, <strong>Summer 2025</strong>.
       <ul>
         <!-- <li>(with: <a href="#">Adobe Research</a>). <strong><u>Accepted at CVPR 2026</u></strong> 🎉</li> -->
       </ul>
@@ -112,7 +112,7 @@ My PhD is immensely motivated by my extreme passion for teaching. I aim to impar
 
 I have been fortunate to teach:
 
-- [Computer Vision and Generative AI course at UB.](https://naresh-ub.github.io/cvip-summer25) _(Summer 2025)._
+- [Computer Vision and Generative AI course at UB.](https://naresh-devula.github.io/cvip-summer25) _(Summer 2025)._
 <!-- - [Differential Equations and Diffusion Models](#) (soon). -->
 
 ## Contact Details
@@ -144,7 +144,7 @@ I have been fortunate to teach:
   <a href="https://scholar.google.com/citations?user=20vLrzMAAAAJ&hl=en" style="color: #4285F4;">
     <i class="fa-brands fa-google-scholar"></i>
   </a>
-  <a href="https://github.com/naresh-ub" style="color: green;">
+  <a href="https://github.com/naresh-devula" style="color: green;">
     <i class="fa-brands fa-github"></i>
   </a>
   <a href="https://www.linkedin.com/in/nareshdevulapally" style="color: #0A66C2;">
