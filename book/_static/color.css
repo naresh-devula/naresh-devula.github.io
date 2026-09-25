@@ -1075,22 +1075,17 @@ html[data-theme="dark"] div.admonition {
 }
 
 /* ==========================================================================
-   MapMyVisitors widget, rendered site-wide via the theme's extra_footer
+   MapMyVisitors globe: landing page only, small, under the social icons.
+   Sized with transform rather than width/height -- globe.js writes inline
+   dimensions onto the node it injects, and overriding those collapses it.
    ========================================================================== */
-.visitor-map {
+.visitor-globe {
   display: flex;
   justify-content: center;
-  margin: 1.6rem 0 0.4rem;
-  opacity: 0.85;
-}
-.visitor-map img,
-.visitor-map canvas,
-.visitor-map iframe { max-width: 100%; height: auto; }
-
-/* The widget is generated with a light background (cl=ffffff), so give it a
-   neutral plate in dark mode rather than letting it glare off the page. */
-html[data-theme="dark"] .visitor-map {
-  opacity: 0.75;
-  border-radius: 8px;
+  transform: scale(0.42);
+  transform-origin: center top;
+  height: 92px;            /* reclaims the space the scale leaves behind */
   overflow: hidden;
+  margin: 0;
+  opacity: 0.9;
 }
