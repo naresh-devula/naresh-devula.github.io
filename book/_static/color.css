@@ -480,3 +480,596 @@ html[data-theme="dark"] .bd-content div.cell_output img {
 
 .remotion-embed-wrap { color-scheme: light dark; }
 html[data-theme="dark"] .remotion-embed-wrap { color-scheme: dark; }
+
+/* ==========================================================================
+   Research-interest cards (sphinx-design)
+   ========================================================================== */
+
+/* Venue badges: uniform-width mono pills for visual coherence */
+.sd-card-footer .sd-badge {
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 0.68rem !important;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.3em 0.55em;
+  border-radius: 5px;
+  vertical-align: 0.08em;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+  display: inline-block;
+  min-width: 5.9rem;          /* fits the longest: "ACM MM 2025" */
+  text-align: center;
+}
+
+/* Affiliation logos sitting inline after the collaborator name */
+.aff-logo {
+  /* Same box as .collab-logo: contain inside a fixed 3.6em x 1.6em frame.
+     Every logo is width-constrained to 3.6em, so a 5.56-aspect wordmark (ASU)
+     and a 2.63 one (UB) occupy identical horizontal space and no line rewraps. */
+  display: inline-block;
+  height: 1.6em;
+  width: 3.6em;
+  object-fit: contain;
+  object-position: center;
+  vertical-align: middle;
+  margin: 0 0.4rem 0 0.1rem;   /* sits between the venue badge and the title */
+  opacity: 0.92;
+}
+
+/* Badge must stay legible in dark mode */
+html[data-theme="dark"] .sd-card-footer .sd-badge.sd-bg-dark {
+  background-color: #2f3742 !important;
+  color: #ccd4de !important;
+}
+
+/* One paper per line, comfortable spacing */
+.sd-card-footer p {
+  margin-bottom: 0.55rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+.sd-card-footer p:last-child { margin-bottom: 0; }
+
+/* The research-area title (sphinx-design emits .sd-card-header when the card
+   is top-level, and .sd-card-title when nested inside an admonition) */
+.sd-card-header,
+.sd-card-title {
+  font-weight: 700;
+  font-size: 1.03rem;
+  letter-spacing: -0.005em;
+  display: flex;
+  align-items: center;
+}
+
+/* The question reads as the lead */
+.sd-card-body { font-size: 0.98rem; }
+
+/* Octicons keep their colour class but line up with the text */
+.sd-card-header .sd-octicon,
+.sd-card-title .sd-octicon { flex: 0 0 auto; }
+
+/* ==========================================================================
+   Collaborators: two centred columns, borderless, logo beside each name
+   ========================================================================== */
+.collab-cols {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;      /* centre the whole block on the page */
+  gap: 0.25rem 3.2rem;
+  margin: 1.2rem auto 1.8rem;
+}
+
+.collab-col { display: flex; flex-direction: column; }
+
+.collab-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.34rem 0;
+  line-height: 1.35;
+}
+
+/* Fixed box so names align despite very different logo aspect ratios */
+.collab-logo {
+  height: 1.6em;
+  width: 3.6em;
+  object-fit: contain;
+  object-position: left center;
+  flex: 0 0 auto;
+  opacity: 0.92;
+}
+
+.collab-item a { font-size: 1rem; font-weight: 600; }
+
+@media (max-width: 620px) {
+  .collab-cols { grid-template-columns: max-content; gap: 0; }
+}
+
+/* ==========================================================================
+   Headings: a touch smaller than the theme default
+   Scoped to article content so the sidebar and nav are untouched.
+   ========================================================================== */
+.bd-content h1 { font-size: 2.1rem; }
+.bd-content h2 { font-size: 1.55rem; }
+.bd-content h3 { font-size: 1.28rem; }
+.bd-content h4 { font-size: 1.1rem; }
+
+.bd-content h2 { margin-top: 2.2rem; margin-bottom: 0.7rem; }
+.bd-content h3 { margin-top: 1.6rem; }
+
+/* ==========================================================================
+   Interests / Experience: two simple columns inside the job-market admonition
+   ========================================================================== */
+.ie-cols {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 1.2rem 2.5rem;
+  margin-top: 1rem;
+}
+
+.ie-head {
+  font-weight: 700;
+  font-size: 1.02rem;
+  margin-bottom: 0.55rem;
+}
+
+.ie-list { margin: 0; padding-left: 1.15rem; }
+.ie-list li { margin-bottom: 0.28rem; font-size: 0.89rem; line-height: 1.4; }
+
+.ie-entry {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  margin-bottom: 0.62rem;
+}
+.ie-entry:last-child { margin-bottom: 0; }
+
+.ie-logo {
+  /* Each source logo carries its own background (Adobe: black text on white,
+     CVML: cream, Carbynetech: black). None of them survive both themes alone,
+     so every logo sits on a neutral tile that is identical in light and dark. */
+  height: 1.95em;
+  width: 1.95em;
+  object-fit: contain;
+  flex: 0 0 auto;
+  margin-top: 0.1em;
+  display: inline-block;
+  background: #ffffff;
+  border: 0;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.ie-title { font-size: 0.91rem; line-height: 1.35; }
+.ie-sub { font-size: 0.79rem; opacity: 0.62; line-height: 1.35; margin-top: 0.05rem; }
+.ie-note { font-size: 0.79rem; font-style: italic; opacity: 0.72; line-height: 1.4; margin-top: 0.18rem; }
+
+@media (max-width: 620px) {
+  .ie-cols { grid-template-columns: 1fr; gap: 1rem; }
+}
+
+/* ==========================================================================
+   Grid nested inside an admonition
+   sphinx-design rows use Bootstrap negative horizontal margins with matching
+   column padding. Inside a padded admonition that pushes the cards past the
+   text edge, so the cards no longer line up with the paragraph above them.
+   Neutralise the horizontal gutter only -- the vertical one is what spaces
+   the stacked cards, so it must survive.
+   ========================================================================== */
+.admonition .sd-container-fluid { padding-left: 0; padding-right: 0; }
+.admonition .sd-row { margin-left: 0; margin-right: 0; }
+.admonition .sd-row > * { padding-left: 0; padding-right: 0; }
+
+/* Card title: icon aligned to the first line, not centred against a
+   title that wraps to two lines. */
+.sd-card-header,
+.sd-card-title {
+  align-items: flex-start;
+}
+.sd-card-header .sd-octicon,
+.sd-card-title .sd-octicon {
+  margin-top: 0.18em;
+}
+
+/* --- Cards nested in an admonition: keep the full box inside the padding --- */
+.admonition .sd-container-fluid,
+.admonition .sd-row,
+.admonition .sd-row > *,
+.admonition .sd-card {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* The theme's card border colour is nearly invisible against the tinted
+   admonition background, so state it explicitly. */
+.admonition .sd-card {
+  border: 1px solid rgba(128, 128, 128, 0.30) !important;
+  width: 100% !important;
+}
+
+/* Small inset so the card edges never sit flush against the admonition wall */
+.admonition .sd-container-fluid {
+  padding-left: 0;
+  padding-right: 0.15rem;
+}
+
+/* --- Cards inside an admonition need their own surface -------------------
+   The card background and the admonition's tinted ground resolve to the same
+   colour, so a 1px border has nothing to sit against and reads as invisible.
+   Give the card the page background plus a real edge and lift.
+   ------------------------------------------------------------------------ */
+.admonition .sd-card {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.16) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07) !important;
+}
+
+html[data-theme="dark"] .admonition .sd-card {
+  background-color: rgba(255, 255, 255, 0.045) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  box-shadow: none !important;
+}
+
+/* ==========================================================================
+   FIX: cards nested in an admonition overflowed to the right while the left
+   gutter was too wide. The theme indents every admonition child by 1.4rem,
+   and the sphinx-design grid re-derives its own width underneath that, so the
+   two never agreed. Pin one gutter for all children and force the grid to
+   inherit it exactly.
+   ========================================================================== */
+.admonition p.admonition-title ~ *,
+div.admonition p.admonition-title ~ * {
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+}
+
+.admonition .sd-container-fluid {
+  padding: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+}
+
+.admonition .sd-row {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.admonition .sd-row > * {
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.admonition .sd-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Long paper titles must wrap inside the card, never widen it */
+.admonition .sd-card-body,
+.admonition .sd-card-footer { box-sizing: border-box; }
+.admonition .sd-card-footer p { overflow-wrap: anywhere; }
+
+/* --- Vertical rhythm inside admonitions ---------------------------------- */
+.admonition p { margin-bottom: 0.55rem; }
+
+/* space above the first card, and below the last one */
+.admonition .sd-container-fluid {
+  margin-top: 0.4rem !important;
+  margin-bottom: 0.15rem !important;
+}
+
+/* space above the Interests / Experience columns */
+.ie-cols { margin-top: 0.6rem; }
+
+/* ==========================================================================
+   Publications list on the landing page -- plain rows, no cards.
+   Venue sits in its own fixed column, centred both ways against the entry.
+   ========================================================================== */
+.pub-scroll {
+  max-height: 22rem;
+  overflow-y: auto;
+  /* same tint and border as .news-scroll so the two boxes read as siblings */
+  border: 1px solid rgba(47, 115, 192, 0.35);
+  border-radius: 10px;
+  padding: 0.55rem 0.9rem;
+  background: rgba(47, 115, 192, 0.03);
+}
+
+.pub-item {
+  display: flex;
+  align-items: center;          /* vertical centring of the venue */
+  gap: 0.9rem;
+  padding: 0.55rem 0;
+}
+.pub-item + .pub-item { border-top: 1px solid rgba(128, 128, 128, 0.14); }
+
+.pub-venue {
+  /* Matches the {bdg-dark} venue badges in the research-focus cards */
+  flex: 0 0 5.9rem;
+  align-self: center;
+  text-align: center;
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  padding: 0.3em 0.55em;
+  border-radius: 5px;
+  background-color: #212529;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+html[data-theme="dark"] .pub-venue {
+  background-color: #2f3742;
+  color: #ccd4de;
+}
+
+/* Equal-contribution marker */
+.eq { font-weight: 600; }
+
+.pub-body { flex: 1 1 auto; min-width: 0; }
+
+.pub-title a {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.pub-authors {
+  font-style: italic;
+  font-size: 0.82rem;
+  opacity: 0.68;
+  line-height: 1.45;
+  margin-top: 0.18rem;
+}
+
+@media (max-width: 560px) {
+  .pub-item { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+  .pub-venue { text-align: left; flex-basis: auto; }
+}
+
+/* Research-card questions read as prompts, not statements */
+.admonition .sd-card-body > p.sd-card-text { font-style: italic; }
+
+/* ==========================================================================
+   Teaching list on the landing page -- same row grammar as publications
+   ========================================================================== */
+.teach-list { display: flex; flex-direction: column; margin: 1rem 0 1.2rem; }
+
+.teach-item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.6rem 0;
+}
+.teach-item + .teach-item { border-top: 1px solid rgba(128, 128, 128, 0.14); }
+
+.teach-role {
+  flex: 0 0 6.6rem;
+  align-self: center;
+  text-align: center;
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  padding: 0.3em 0.5em;
+  border-radius: 5px;
+  background-color: #212529;
+  color: #ffffff;
+  white-space: nowrap;
+}
+html[data-theme="dark"] .teach-role { background-color: #2f3742; color: #ccd4de; }
+
+.teach-body { flex: 1 1 auto; min-width: 0; }
+.teach-title { font-size: 0.93rem; font-weight: 600; line-height: 1.4; }
+.teach-meta  { font-size: 0.8rem; opacity: 0.62; margin-top: 0.1rem; }
+.teach-note  { font-size: 0.85rem; opacity: 0.78; margin-top: 0.22rem; line-height: 1.45; }
+
+@media (max-width: 560px) {
+  .teach-item { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+  .teach-role { text-align: left; flex-basis: auto; }
+}
+
+/* Teaching list sits inside an admonition: drop the theme's extra child indent
+   so the rows line up with the award text above them. */
+.admonition .teach-list { margin-left: 0; margin-right: 0; }
+
+
+/* ==========================================================================
+   Student-feedback carousel, ported from the CSE 4/573 course site
+   (github.com/naresh-devula/cvip-summer25). Bare .card / blockquote /
+   .student selectors are namespaced under .feedback-section so they cannot
+   collide with sphinx-design cards elsewhere on this site.
+   ========================================================================== */
+.feedback-section {
+    max-width: 1100px;
+    margin: 24px auto;
+    /* font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; */
+  }
+
+  .carousel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .profile-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-weight: 600;
+  }
+  .profile-links a {
+    text-decoration: none;
+  }
+
+  .carousel-controls {
+    display: flex;
+    gap: 8px;
+  }
+
+  .carousel-btn {
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    line-height: 1;
+    transition: background 0.2s ease, transform 0.05s ease;
+  }
+  .carousel-btn:hover { background: #f6f6f6; }
+  .carousel-btn:active { transform: scale(0.98); }
+  .carousel-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  .carousel {
+    position: relative;
+  }
+
+  /* Track scrolls programmatically; scrollbar hidden */
+  .carousel-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 16px) / 2); /* 2 cards visible with 16px gap */
+    gap: 16px;
+    overflow: hidden;          /* hide scrollbar & manual scroll */
+    scroll-snap-type: x mandatory;
+  }
+
+  .feedback-section .card {
+    position: relative;
+    scroll-snap-align: start;
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 14px;
+    padding: 18px 18px 48px;   /* extra bottom padding so quote doesn't touch signature */
+    min-height: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+  }
+
+  .feedback-section blockquote {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #222;
+  }
+
+  .feedback-section .student {
+    position: absolute;
+    right: 14px;
+    bottom: 12px;
+    font-size: 0.9rem;
+    color: #666;
+    white-space: nowrap;
+  }
+
+  /* Small screens: 1 per view */
+  @media (max-width: 640px) {
+    .carousel-track {
+      grid-auto-columns: 100%;
+    }
+  }
+
+/* ===== Dark mode fixes for the feedback carousel ===== */
+:root[data-theme="dark"] .feedback-section,
+:root[data-mode="dark"] .feedback-section,
+:root[data-mode="auto"][data-theme="dark"] .feedback-section {
+  color: #e6edf3; /* base text */
+}
+
+/* Links next to the arrows */
+:root[data-theme="dark"] .profile-links a,
+:root[data-mode="dark"] .profile-links a,
+:root[data-mode="auto"][data-theme="dark"] .profile-links a {
+  color: #5aa7ff;
+}
+:root[data-theme="dark"] .profile-links a:hover,
+:root[data-mode="dark"] .profile-links a:hover,
+:root[data-mode="auto"][data-theme="dark"] .profile-links a:hover {
+  color: #a8cfff;
+  text-decoration: underline;
+}
+
+/* Arrow buttons */
+:root[data-theme="dark"] .carousel-btn,
+:root[data-mode="dark"] .carousel-btn,
+:root[data-mode="auto"][data-theme="dark"] .carousel-btn {
+  background: #1a222c;
+  color: #e6edf3;
+  border: 1px solid #2a3644;
+}
+:root[data-theme="dark"] .carousel-btn:hover,
+:root[data-mode="dark"] .carousel-btn:hover,
+:root[data-mode="auto"][data-theme="dark"] .carousel-btn:hover {
+  background: #223042;
+}
+:root[data-theme="dark"] .carousel-btn:disabled,
+:root[data-mode="dark"] .carousel-btn:disabled,
+:root[data-mode="auto"][data-theme="dark"] .carousel-btn:disabled {
+  opacity: 0.45;
+}
+
+/* Cards */
+:root[data-theme="dark"] .feedback-section .card,
+:root[data-mode="dark"] .feedback-section .card,
+:root[data-mode="auto"][data-theme="dark"] .feedback-section .card {
+  background: #151b22;            /* card surface */
+  border: 1px solid #2a3644;       /* subtle border */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+/* Quote block inside cards */
+:root[data-theme="dark"] .feedback-section .card blockquote,
+:root[data-mode="dark"] .feedback-section .card blockquote,
+:root[data-mode="auto"][data-theme="dark"] .feedback-section .card blockquote {
+  color: #e6edf3;                  /* readable quote text */
+  background: #1b2430;             /* slightly raised */
+  border: 1px solid #2a3644;
+  border-left: 3px solid #5aa7ff;  /* accent stripe */
+  border-radius: 10px;
+}
+
+/* Tighten the gap between the award text and the teaching rows */
+.admonition .teach-list { margin-top: 0.3rem; margin-bottom: 0.5rem; }
+
+/* Teaching links, sitting between the heading and the award box */
+.teach-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.2rem 0 0.35rem;
+}
+.teach-links a {
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 0.24rem 0.62rem;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 999px;
+  text-decoration: none;
+}
+.teach-links a:hover { border-color: currentColor; text-decoration: none; }
+
+/* The theme gives every admonition margin:1.5625em auto. That is the gap under
+   the teaching links, not the links' own margin. Pull the award box up. */
+.teach-links + .admonition,
+.teach-links + div.admonition { margin-top: 0.7rem !important; }
+
+/* ==========================================================================
+   Dark mode: admonitions carry a grey fill (--pst-color-on-background) that
+   reads as a raised slab. Drop it so they sit on the page like .pub-scroll,
+   keeping the coloured left rule and the tinted title bar.
+   ========================================================================== */
+html[data-theme="dark"] .admonition,
+html[data-theme="dark"] div.admonition {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}

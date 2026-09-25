@@ -15,6 +15,7 @@ html:
   extra_js:
     - "_static/analytics.js"
     - "_static/remotion-embed.js"
+    - "_static/external-links.js"
   analytics:
     google_analytics_id: G-YTF2311PDM
 
