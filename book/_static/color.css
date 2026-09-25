@@ -1073,3 +1073,24 @@ html[data-theme="dark"] div.admonition {
   background-color: transparent !important;
   box-shadow: none !important;
 }
+
+/* ==========================================================================
+   MapMyVisitors widget, rendered site-wide via the theme's extra_footer
+   ========================================================================== */
+.visitor-map {
+  display: flex;
+  justify-content: center;
+  margin: 1.6rem 0 0.4rem;
+  opacity: 0.85;
+}
+.visitor-map img,
+.visitor-map canvas,
+.visitor-map iframe { max-width: 100%; height: auto; }
+
+/* The widget is generated with a light background (cl=ffffff), so give it a
+   neutral plate in dark mode rather than letting it glare off the page. */
+html[data-theme="dark"] .visitor-map {
+  opacity: 0.75;
+  border-radius: 8px;
+  overflow: hidden;
+}
