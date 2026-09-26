@@ -143,3 +143,7 @@ pyproject.toml
 # Local-only build configs (design iteration; skip the manim page)
 book/_config.local.yml
 book/_toc.local.yml
+
+# Visitor globe backend: Cloudflare Worker source, config and KV namespace id.
+# Deployed with wrangler from this machine, deliberately not published.
+worker/

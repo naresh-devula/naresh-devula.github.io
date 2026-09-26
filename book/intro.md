@@ -30,7 +30,7 @@ I am actively looking for **postdoctoral** and **research scientist** positions 
   <div>
     <div class="ie-head">Experience</div>
     <div class="ie-entry">
-      <img class="ie-logo" src="figures/images/adobe_exp.png" alt="Adobe Research">
+      <img class="ie-logo" src="figures/images/adobe_mark.png" alt="Adobe Research">
       <div>
         <div class="ie-title">Research Scientist Intern, <strong>2026 - Present</strong></div>
         <div class="ie-note">Shipping a multimodal watermarking model.</div>
@@ -326,14 +326,26 @@ Received the <a href="https://arc.net/l/quote/fxgsjydt">CSE Graduate Teaching Aw
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
+    /* Flex with align-items:center, rather than inline-block on a text
+       baseline: a Font Awesome glyph sits on the baseline with its own
+       descent, so anything that is not a glyph (the visitor orb) lands at a
+       different height. Giving every item the same 45px box and centring it
+       removes the dependence on font metrics entirely. */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 45px; /* Slightly bigger icons */
+    }
     .social-icons a {
       text-decoration: none; /* Removes underlines */
-      display: inline-block; /* Ensures proper spacing */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 45px;
+      line-height: 1;
       margin: 15px; /* Increased spacing between icons */
-    }
-    .social-icons {
-      text-align: center;
-      font-size: 45px; /* Slightly bigger icons */
     }
   </style>
 </head>
@@ -351,14 +363,10 @@ Received the <a href="https://arc.net/l/quote/fxgsjydt">CSE Graduate Teaching Aw
   <a href="https://www.linkedin.com/in/nareshdevulapally" style="color: #0A66C2;">
     <i class="fa-brands fa-linkedin"></i>
   </a>
+  <span class="visitor-orb" id="visitor-orb"></span>
   <!-- <a href="#" style="color: black;">
     <i class="fa-brands fa-x-twitter"></i>
   </a> -->
 </div>
 
-<div class="visitor-map">
-  <script type="text/javascript" id="mapmyvisitors"
-    src="https://mapmyvisitors.com/map.js?d=TRY7vM8eKxPG8y_FA_4ZyVgL7ZQxEht4ET8dFtGh9p8&cl=ffffff&w=220&t=n"></script>
-  <noscript><a href="https://mapmyvisitors.com/web/1c8gc" rel="noopener noreferrer">Visitor map</a></noscript>
-</div>
 

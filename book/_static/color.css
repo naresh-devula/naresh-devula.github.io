@@ -625,19 +625,33 @@ html[data-theme="dark"] .sd-card-footer .sd-badge.sd-bg-dark {
 .ie-entry:last-child { margin-bottom: 0; }
 
 .ie-logo {
-  /* Each source logo carries its own background (Adobe: black text on white,
-     CVML: cream, Carbynetech: black). None of them survive both themes alone,
-     so every logo sits on a neutral tile that is identical in light and dark. */
+  /* No tile and no padding: a plate behind these reads as a white box in dark
+     mode. Adobe uses the all-red mark, which carries no background and holds on
+     either ground. CVML (cream) and Carbynetech (black) bake their own square
+     into the file, so the radius makes each read as a logo chip, not padding. */
   height: 1.95em;
   width: 1.95em;
   object-fit: contain;
   flex: 0 0 auto;
   margin-top: 0.1em;
   display: inline-block;
-  background: #ffffff;
+  background: transparent;
   border: 0;
   border-radius: 5px;
-  padding: 2px;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Dark mode: the template plates every <img> with white (see the rule near the
+   top) so transparent diagrams stay readable on a dark ground. On a logo that
+   plate reads as white padding boxed around the mark, so undo it for the three
+   landing-page logo classes only. Same specificity as the template rule, so it
+   has to sit after it in source order. Every other image keeps its plate. */
+html[data-theme="dark"] img.aff-logo,
+html[data-theme="dark"] img.collab-logo,
+html[data-theme="dark"] img.ie-logo {
+  background-color: transparent !important;
+  border-radius: 5px !important;
 }
 
 .ie-title { font-size: 0.91rem; line-height: 1.35; }
@@ -1106,3 +1120,41 @@ html[data-theme="dark"] div.admonition {
   text-decoration: none !important;
   box-shadow: none !important;
 }
+
+/* ==========================================================================
+   Visitor orb: a globe sized to sit in the social icon row, drawn by
+   _static/visitor-orb.js. Records the visit against the Cloudflare Worker in
+   ../../worker and plots previous readers as dots. Deliberately textless: the
+   numbers live on the Worker's dashboard, not on the page.
+   ========================================================================== */
+.social-icons .visitor-orb {
+  /* Same 45px box as the icon anchors, with a 40px orb centred inside it, so
+     the orb's optical size matches a Font Awesome glyph at font-size 45px. */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 45px;
+  margin: 15px;
+  flex: 0 0 auto;
+  line-height: 0;
+}
+
+.visitor-orb svg {
+  display: block;
+  width: 40px;
+  height: 40px;
+  overflow: visible;
+}
+
+.visitor-orb .vo-ocean { fill: rgba(47, 115, 192, 0.10); }
+.visitor-orb .vo-rim   { fill: none; stroke: rgba(47, 115, 192, 0.60); stroke-width: 3.5; }
+.visitor-orb .vo-grid  { fill: none; stroke: rgba(47, 115, 192, 0.40); stroke-width: 2.2; }
+.visitor-orb .vo-grid ellipse,
+.visitor-orb .vo-grid polyline { fill: none; vector-effect: non-scaling-stroke; }
+.visitor-orb .vo-dots circle { fill: #e8833c; }
+
+html[data-theme="dark"] .visitor-orb .vo-ocean { fill: rgba(255, 255, 255, 0.06); }
+html[data-theme="dark"] .visitor-orb .vo-rim   { stroke: rgba(122, 170, 224, 0.62); }
+html[data-theme="dark"] .visitor-orb .vo-grid  { stroke: rgba(122, 170, 224, 0.42); }
+html[data-theme="dark"] .visitor-orb .vo-dots circle { fill: #f0a05a; }
