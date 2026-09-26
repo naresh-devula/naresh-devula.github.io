@@ -1075,17 +1075,34 @@ html[data-theme="dark"] div.admonition {
 }
 
 /* ==========================================================================
-   MapMyVisitors globe: landing page only, small, under the social icons.
-   Sized with transform rather than width/height -- globe.js writes inline
-   dimensions onto the node it injects, and overriding those collapses it.
+   MapMyVisitors map widget: landing page only, small, under the social icons.
+   map.js writes its own inline width/height onto #mapmyvisitors-widget from
+   the w= parameter, so the size lives there (w=220) and this only centres it.
+   The globe widget is deliberately not used: its globe_call_home.js data and
+   tracking endpoint 404s, so it renders an empty sphere and records no visits.
    ========================================================================== */
-.visitor-globe {
+.visitor-map {
   display: flex;
   justify-content: center;
-  transform: scale(0.42);
-  transform-origin: center top;
-  height: 92px;            /* reclaims the space the scale leaves behind */
+  margin: 0.55rem 0 0;
+}
+
+.visitor-map #mapmyvisitors-widget {
+  display: block;
+  border: 0;
+  border-radius: 8px;
   overflow: hidden;
-  margin: 0;
-  opacity: 0.9;
+  line-height: 0;
+  opacity: 0.92;
+  transition: opacity 0.2s ease;
+}
+
+.visitor-map #mapmyvisitors-widget:hover {
+  opacity: 1;
+}
+
+.visitor-map a,
+.visitor-map a:hover {
+  text-decoration: none !important;
+  box-shadow: none !important;
 }

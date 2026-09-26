@@ -356,9 +356,9 @@ Received the <a href="https://arc.net/l/quote/fxgsjydt">CSE Graduate Teaching Aw
   </a> -->
 </div>
 
-<div class="visitor-globe">
-  <script type="text/javascript" id="mmvst_globe"
-    src="https://mapmyvisitors.com/globe.js?d=rEYa1RwmwEapSJFcWFE9KII-D07ERx4hMesXQqkFj7A"></script>
+<div class="visitor-map">
+  <script type="text/javascript" id="mapmyvisitors"
+    src="https://mapmyvisitors.com/map.js?d=TRY7vM8eKxPG8y_FA_4ZyVgL7ZQxEht4ET8dFtGh9p8&cl=ffffff&w=220&t=n"></script>
   <noscript><a href="https://mapmyvisitors.com/web/1c8gc" rel="noopener noreferrer">Visitor map</a></noscript>
 </div>
 
