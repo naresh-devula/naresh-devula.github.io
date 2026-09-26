@@ -1158,3 +1158,89 @@ html[data-theme="dark"] .visitor-orb .vo-ocean { fill: rgba(255, 255, 255, 0.06)
 html[data-theme="dark"] .visitor-orb .vo-rim   { stroke: rgba(122, 170, 224, 0.62); }
 html[data-theme="dark"] .visitor-orb .vo-grid  { stroke: rgba(122, 170, 224, 0.42); }
 html[data-theme="dark"] .visitor-orb .vo-dots circle { fill: #f0a05a; }
+
+/* --- Research Focus lead: sentence, icon row, sub-line ---------------------
+   The three areas sit in their own row under the lead sentence, each one
+   carrying the octicon and colour of the card it points at further down, so
+   the row doubles as an index into those cards.
+
+   Nothing here may set white-space:nowrap. The theme gives .admonition
+   overflow:hidden, so a row too wide for the column is clipped rather than
+   scrolled, and a term that cannot wrap simply disappears off the right edge.
+   Wrapping is the only safe failure mode in this box. */
+.lead-terms {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.9rem;
+  margin-top: 1.6rem;
+  margin-bottom: 0;
+}
+
+.lead-terms .lt-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  flex: 0 0 auto;          /* natural width: shrinking makes each label wrap */
+  max-width: 100%;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* Each label holds one line. Safe here in a way the whole row was not: a
+   single label is a fraction of the column width, and the row itself can
+   still wrap between labels, so nothing can end up wider than the box and
+   get clipped by the admonition's overflow:hidden. */
+.lead-terms .lt-col p:last-child { white-space: nowrap; }
+
+@media (max-width: 620px) {
+  .lead-terms .lt-col p:last-child { white-space: normal; }
+}
+
+/* The directive emits the icon and the label as two paragraphs, which is what
+   stacks them; their default margins would undo the gap above. */
+.lead-terms .lt-col p { margin: 0; }
+.lead-terms .lt-col svg { margin: 0; }
+
+.lead-terms .lt-1 p:last-child { color: #0a6d7f; }
+.lead-terms .lt-2 p:last-child { color: #23548e; }
+.lead-terms .lt-3 p:last-child { color: #176339; }
+
+html[data-theme="dark"] .lead-terms .lt-1 p:last-child { color: #6fc9d8; }
+html[data-theme="dark"] .lead-terms .lt-2 p:last-child { color: #9dc4f0; }
+html[data-theme="dark"] .lead-terms .lt-3 p:last-child { color: #7fd4b4; }
+
+/* Sits closer under the row than the row sits under the lead sentence: it
+   belongs to the row, not to the paragraph above it. The row carries
+   margin-bottom:0 so this is the only gap in play, since adjacent block
+   margins collapse to the larger of the two rather than adding up. */
+.lead-sub {
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+}
+
+.lead-sub p {
+  margin: 0;
+  font-size: 0.86rem;
+  font-style: italic;
+  opacity: 0.68;
+}
+
+/* The card grid brings its own 1rem of body padding, so the cards read as
+   further from the sub-line than the measured gap says they are. The grid's
+   vertical gutter nets to zero at the top (the row's negative margin-top is
+   cancelled by the first column's positive one), so there is nothing to
+   subtract there: pulling the whole grid up is the only lever.
+
+   !important is required, not decorative. The generic rule further up this
+   file ("space above the first card") sets margin-top on every
+   .admonition .sd-container-fluid with !important, and !important wins over
+   specificity, so without it this declaration is discarded in silence. */
+.lead-sub + .sd-container-fluid {
+  margin-top: -0.35rem !important;
+}
+

@@ -56,15 +56,37 @@ I am actively looking for **postdoctoral** and **research scientist** positions 
 
 ```{admonition} Research Focus
 :class: tip
-My research focuses on [controlling diffusion models](https://slides.com/naresh-devula/phd-dissertation-slides) during generation to understand their **representations**, **improve reliability**, and establish the **provenance** of generated content. My work spans images, video, and language, including text-to-image diffusion models, diffusion language models, and diffusion vision-language models.
+My research focuses on [controlling diffusion models](https://slides.com/naresh-devula/phd-dissertation-slides) during generation to address challenges in:
+
+::::{div} lead-terms
+:::{div} lt-col lt-1
+{octicon}`shield-lock;1.45em;sd-text-primary`
+
+AI Provenance and AI Safety
+:::
+:::{div} lt-col lt-2
+{octicon}`telescope;1.45em;sd-text-info`
+
+Explain Model Representations
+:::
+:::{div} lt-col lt-3
+{octicon}`check-circle;1.45em;sd-text-success`
+
+Improve Reliability
+:::
+::::
+
+:::{div} lead-sub
+My work spans images, video, and language, including text-to-image diffusion models, diffusion language models, and diffusion vision-language models.
+:::
 
 ::::{grid} 1
 :gutter: 3
 
-:::{grid-item-card} {octicon}`shield-lock;1.15em;sd-text-primary sd-mr-2` AI Provenance: Watermarking and Content Protection
+:::{grid-item-card} {octicon}`shield-lock;1.15em;sd-text-primary sd-mr-2` AI Provenance and AI Safety: Watermarking and Content Protection
 :shadow: sm
 
-How can we establish the provenance of generated media and protect creators against unauthorized personalization?
+Establish provenance for generated media and protect content against unauthorized personalization.
 
 +++
 {bdg-dark}`ICCV 2025` <img class="aff-logo" src="figures/images/adobe_corp.png" alt="Adobe Research" title="Adobe Research"> [Your Text Encoder can be an Object-Level Watermarking Controller](https://research.adobe.com/publication/your-text-encoder-can-be-an-object-level-watermarking-controller/)
@@ -75,7 +97,7 @@ How can we establish the provenance of generated media and protect creators agai
 :::{grid-item-card} {octicon}`telescope;1.15em;sd-text-info sd-mr-2` Interpretability: Representations to Textual Explanations
 :shadow: sm
 
-How can we uncover the representations underlying a model's outputs and turn them into textual explanations?
+Uncover representations underlying a model's outputs and turn them into textual explanations.
 
 +++
 {bdg-dark}`CVPR 2026` <img class="aff-logo" src="figures/images/adobe_corp.png" alt="Adobe Research" title="Adobe Research"> [Interpretable Hard Prompt Inversion made Edit-Friendly via Token-to-Token Similarity Reduction in dLLMs](https://openaccess.thecvf.com/content/CVPR2026/papers/Devulapally_Interpretable_Prompts_made_Edit-Friendly_Token-to-Token_Similarity_Reduction_in_dLLMs_for_CVPR_2026_paper.pdf)
@@ -84,7 +106,7 @@ How can we uncover the representations underlying a model's outputs and turn the
 :::{grid-item-card} {octicon}`check-circle;1.15em;sd-text-success sd-mr-2` Reliability: Hallucination Mitigation
 :shadow: sm
 
-How can we detect and correct hallucinations during generation in diffusion language and vision-language models?
+Detect and correct hallucinations during generation in diffusion models (image and text generation).
 
 +++
 {bdg-dark}`CoLM 2026` <img class="aff-logo" src="figures/images/asu_logo.png" alt="Arizona State University" title="Arizona State University"> [OSCAR: Orchestrated Self-verification and Cross-path Refinement](https://arxiv.org/abs/2604.01624)
