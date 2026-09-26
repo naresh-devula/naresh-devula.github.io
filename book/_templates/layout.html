@@ -5,3 +5,16 @@
 {{ super() }}
 <meta name="google-site-verification" content="tInAMckSc9yLcS07vqK1BuzBzeEQNBUzHR7ytTU9Dww" />
 {% endblock %}
+
+{#- The landing page H1 and the site title are both "Naresh Kumar Devulapally",
+    so Sphinx concatenated them into "Naresh Kumar Devulapally - Naresh Kumar
+    Devulapally". That string is the blue link in search results, and a repeated
+    name there wastes the most valuable line on the page. Give the home page a
+    real title and leave every other page's suffix alone. -#}
+{% block htmltitle %}
+{%- if pagename == 'intro' -%}
+<title>Naresh Kumar Devulapally | PhD Candidate, University at Buffalo</title>
+{%- else -%}
+{{ super() }}
+{%- endif -%}
+{% endblock %}
