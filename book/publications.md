@@ -25,7 +25,7 @@ Also on [Google Scholar](https://scholar.google.com/citations?user=20vLrzMAAAAJ)
     <div class="paper-venue"><i>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR 2026</b>)</i></div>
     <div class="paper-links">
       <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Devulapally_Interpretable_Prompts_made_Edit-Friendly_Token-to-Token_Similarity_Reduction_in_dLLMs_for_CVPR_2026_paper.pdf">Paper</a>
-      <a href="https://slides.com/naresh-ub/prompt-inversion-llada">Slides</a>
+      <a href="https://slides.com/naresh-devula/prompt-inversion-llada">Slides</a>
       <a href="">Code (Soon)</a>
     </div>
   </div>
@@ -111,7 +111,7 @@ Also on [Google Scholar](https://scholar.google.com/citations?user=20vLrzMAAAAJ)
     <div class="paper-venue"><i>33rd ACM International Conference on Multimedia (<b>ACM MM 2025</b>)</i></div>
     <div class="paper-links">
       <a href="https://dl.acm.org/doi/10.1145/3746027.3755112">Paper</a>
-      <a href="https://slides.com/naresh-ub/unlearnable-samples">Slides</a>
+      <a href="https://slides.com/naresh-devula/unlearnable-samples">Slides</a>
       <a href="https://github.com/naresh-devula">Code</a>
     </div>
   </div>
@@ -129,7 +129,7 @@ Also on [Google Scholar](https://scholar.google.com/citations?user=20vLrzMAAAAJ)
     <div class="paper-venue"><i>IEEE/CVF International Conference on Computer Vision (<b>ICCV 2025</b>)</i></div>
     <div class="paper-links">
       <a href="https://openaccess.thecvf.com/content/ICCV2025/html/Devulapally_Your_Text_Encoder_Can_Be_An_Object-Level_Watermarking_Controller_ICCV_2025_paper.html">Paper</a>
-      <a href="https://slides.com/naresh-ub/umbc-talk-watermarking">Slides</a>
+      <a href="https://slides.com/naresh-devula/umbc-talk-watermarking">Slides</a>
       <a href="https://iccv.thecvf.com/media/PosterPDFs/ICCV%202025/1870.png?t=1759981503.377534">Poster</a>
       <a href="https://github.com/naresh-devula">Code</a>
     </div>

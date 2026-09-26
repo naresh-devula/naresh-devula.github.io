@@ -56,7 +56,7 @@ I am actively looking for **postdoctoral** and **research scientist** positions 
 
 ```{admonition} Research Focus
 :class: tip
-My research focuses on [controlling diffusion models](https://slides.com/naresh-ub/phd-dissertation-slides) during generation to understand their **representations**, **improve reliability**, and establish the **provenance** of generated content. My work spans images, video, and language, including text-to-image diffusion models, diffusion language models, and diffusion vision-language models.
+My research focuses on [controlling diffusion models](https://slides.com/naresh-devula/phd-dissertation-slides) during generation to understand their **representations**, **improve reliability**, and establish the **provenance** of generated content. My work spans images, video, and language, including text-to-image diffusion models, diffusion language models, and diffusion vision-language models.
 
 ::::{grid} 1
 :gutter: 3
