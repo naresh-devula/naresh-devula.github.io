@@ -1,0 +1,7 @@
+{% extends "!layout.html" %}
+{#- Google Search Console verification, on every page rather than just the
+    home page, so it survives whichever URL Google decides to check. -#}
+{% block extrahead %}
+{{ super() }}
+<meta name="google-site-verification" content="tInAMckSc9yLcS07vqK1BuzBzeEQNBUzHR7ytTU9Dww" />
+{% endblock %}

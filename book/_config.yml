@@ -20,6 +20,8 @@ html:
 sphinx:
   config:
     # Files copied verbatim to the site root. robots.txt only counts there.
+    templates_path:
+      - _templates
     html_extra_path:
       - _extra
     # sphinx-sitemap writes sitemap.xml using html_baseurl (the `baseurl` above)
