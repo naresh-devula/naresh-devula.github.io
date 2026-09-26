@@ -6,6 +6,12 @@ execute:
 
 only_build_toc_files: false
 
+# research_notes/ is unfinished and must not be published. Removing it from
+# _toc.yml alone does not do that, because only_build_toc_files is false, so
+# Sphinx still builds any file it finds and it still lands in the sitemap.
+exclude_patterns:
+  - research_notes/**
+
 html:
   favicon: "figures/TB_favicon.ico"
   baseurl: "https://naresh-devula.github.io/"
@@ -74,7 +80,6 @@ sphinx:
     - teachbooks_sphinx_tippy
     - sphinx_named_colors
     - sphinx_accessibility
-    - manim_slides.docs.manim_slides_directive
 
 bibtex_bibfiles:
   - references.bib

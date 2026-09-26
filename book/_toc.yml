@@ -25,7 +25,3 @@ parts:
           - file: guest_lectures/spring_2026/ddpm.ipynb
           - file: guest_lectures/spring_2026/ddim.ipynb
           - file: guest_lectures/spring_2026/ldm.ipynb
-
-  - caption: "Research Notes"
-    chapters:
-      - file: research_notes/intro.ipynb
