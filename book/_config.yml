@@ -19,6 +19,18 @@ html:
 
 sphinx:
   config:
+    # Files copied verbatim to the site root. robots.txt only counts there.
+    html_extra_path:
+      - _extra
+    # sphinx-sitemap writes sitemap.xml using html_baseurl (the `baseurl` above)
+    sitemap_url_scheme: "{link}"
+    # Open Graph + meta description: controls the Google snippet and the
+    # preview card when the site is shared on LinkedIn, Slack or X.
+    ogp_site_url: "https://naresh-devula.github.io/"
+    ogp_site_name: "Naresh Kumar Devulapally"
+    ogp_image: "https://naresh-devula.github.io/_static/naresh-ub.png"
+    ogp_description_length: 200
+    ogp_enable_meta_description: true
     html_js_files:
       - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     thebe_config:
@@ -48,6 +60,8 @@ sphinx:
         mtextInheritFont: true
 
   extra_extensions:
+    - sphinx_sitemap
+    - sphinxext.opengraph
     - sphinx.ext.imgconverter
     - jupyterbook_patches
     - download_link_replacer

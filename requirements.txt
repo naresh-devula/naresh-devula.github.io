@@ -8,6 +8,8 @@ teachbooks-sphinx-tippy
 sphinx-iframes
 sphinx-named-colors
 sphinx-accessibility
+sphinx-sitemap
+sphinxext-opengraph
 requests
 manim_slides
 manim

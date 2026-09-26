@@ -1,0 +1,8 @@
+# https://naresh-devula.github.io/
+# The previous address, naresh-ub.github.io, is gone and now returns 404.
+# Every page here declares a canonical URL on this host.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://naresh-devula.github.io/sitemap.xml
