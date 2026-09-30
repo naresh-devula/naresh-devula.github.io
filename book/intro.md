@@ -118,7 +118,7 @@ Detect and correct hallucinations during generation in diffusion models (image a
 ```
 
 
-Previously, I completed my MS in Computer Science at the University at Buffalo, working on [robust multimodal learning](https://cse.buffalo.edu/tech-reports/2024-11.pdf) for video emotion recognition with [Dr. Junsong Yuan](https://cse.buffalo.edu/~jsyuan/) and [Dr. Sreyasee Das Bhattacharjee](https://cse.buffalo.edu/~sreyasee/), published at `ACM Multimedia 2023`, `BigMM 2023` and `ICME 2024`. Before graduate school I spent two and a half years as a Data Scientist III, building and deploying production machine learning systems. I studied Mechanical Engineering at NIT Tiruchirappalli.
+Previously, I completed my MS in Computer Science at the University at Buffalo, working on [robust multimodal learning](https://cse.buffalo.edu/tech-reports/2024-11.pdf) for video emotion recognition with [Dr. Junsong Yuan](https://cse.buffalo.edu/~jsyuan/) and [Dr. Sreyasee Das Bhattacharjee](https://cse.buffalo.edu/~sreyasee/), published at `ACM Multimedia 2023`, `BigMM 2023` and `ICME 2024`. Before graduate school I spent two and a half years as a Senior Data Scientist, building and deploying production machine learning systems. I studied Mechanical Engineering at NIT Tiruchirappalli.
 
 ## Collaborators
 
