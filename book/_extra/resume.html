@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume &middot; Naresh Kumar Devulapally</title>
+<meta name="description" content="Resume of Naresh Kumar Devulapally, PhD candidate in computer vision and machine learning at the University at Buffalo, SUNY. Starting December 2026.">
+<link rel="canonical" href="https://naresh-devula.github.io/resume.html">
+<link rel="icon" href="/_static/TB_favicon.ico">
+
+<!-- Link preview card, for when this URL is pasted into LinkedIn or an email. -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Naresh Kumar Devulapally &mdash; Resume">
+<meta property="og:description" content="PhD candidate in computer vision and machine learning, University at Buffalo. Research scientist roles, starting December 2026.">
+<meta property="og:url" content="https://naresh-devula.github.io/resume.html">
+<meta property="og:image" content="https://naresh-devula.github.io/_static/naresh-ub.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap">
+
+<style>
+/* This page is served verbatim from book/_extra, outside the Sphinx theme, so
+   it carries its own tokens rather than inheriting _static/color.css. The two
+   accents are kept in step with the book on purpose: #2F73C0 is the site blue,
+   and the orange is the same one the Resume nav button uses. */
+:root {
+  --bg:        #ffffff;
+  --panel:     #f4f5f7;
+  --ink:       #1a1a1a;
+  --muted:     #5c636e;
+  --line:      #d9dde3;
+  --blue:      #2F73C0;
+  --accent:    #C2410C;
+  --accent-on: #ffffff;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:        #14181d;
+    --panel:     #1c222a;
+    --ink:       #f1f1f1;
+    --muted:     #a7b0bc;
+    --line:      #333b45;
+    --blue:      #79b8ff;
+    --accent:    #FB923C;
+    --accent-on: #14181d;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ---------- bar ---------- */
+
+.bar {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.who { margin-right: auto; min-width: 0; }
+
+.who h1 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.who p {
+  margin: 0.15rem 0 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.who a { color: var(--blue); text-decoration: none; }
+.who a:hover { text-decoration: underline; }
+
+.avail {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 0.72rem;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* ---------- buttons ---------- */
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.42rem 0.9rem;
+  border: 2px solid var(--blue);
+  border-radius: 8px;
+  color: var(--blue);
+  background: transparent;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus-visible { background: var(--blue); color: var(--bg); }
+
+.btn-primary { border-color: var(--accent); color: var(--accent); }
+
+.btn-primary:hover,
+.btn-primary:focus-visible { background: var(--accent); color: var(--accent-on); }
+
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.btn svg { width: 1em; height: 1em; flex: 0 0 auto; }
+
+/* ---------- viewer ---------- */
+
+.viewer {
+  flex: 1 1 auto;
+  min-height: 0;          /* lets the embed shrink inside the flex column */
+  background: var(--panel);
+}
+
+.viewer object,
+.viewer iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+/* Shown only when the browser declines to render a PDF inline. */
+.fallback {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.fallback p { margin: 0; max-width: 34ch; color: var(--muted); }
+
+/* Phones and small tablets render embedded PDFs unreliably (iOS Safari shows
+   a single page or nothing at all), so the download card is served instead. */
+@media (max-width: 760px), (max-height: 420px) {
+  .viewer object { display: none; }
+  .viewer { display: flex; }
+  .viewer .mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+}
+
+.mobile { display: none; }
+.mobile p { margin: 0; max-width: 34ch; color: var(--muted); }
+
+.file {
+  font-family: "Fira Code", ui-monospace, monospace;
+  font-size: 0.8rem;
+  color: var(--muted);
+  word-break: break-all;
+}
+</style>
+</head>
+
+<body>
+
+<header class="bar">
+  <div class="who">
+    <h1>Naresh Kumar Devulapally<span class="avail">starting December 2026</span></h1>
+    <p>Ph.D. Candidate, Computer Vision and Machine Learning, University at Buffalo &middot;
+       <a href="/intro.html">naresh-devula.github.io</a></p>
+  </div>
+
+  <nav class="actions">
+    <a class="btn btn-primary" href="/Naresh-Devulapally-resume-genai.pdf" download>
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M8 1.5v8.5M4.5 7L8 10.5 11.5 7M2 13.5h12"/>
+      </svg>
+      Download PDF
+    </a>
+    <a class="btn" href="/Naresh-Devulapally-resume-genai.pdf" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6.5 2.5H2.5v11h11v-4M9.5 1.5h5v5M14.5 1.5L7 9"/>
+      </svg>
+      Open PDF
+    </a>
+    <a class="btn" href="/intro.html">Back to site</a>
+  </nav>
+</header>
+
+<main class="viewer">
+  <object data="/Naresh-Devulapally-resume-genai.pdf#view=FitH&amp;navpanes=0"
+          type="application/pdf"
+          aria-label="Resume of Naresh Kumar Devulapally">
+    <div class="fallback">
+      <p>Your browser will not display the PDF inline.</p>
+      <a class="btn btn-primary" href="/Naresh-Devulapally-resume-genai.pdf" download>Download the PDF</a>
+      <span class="file">Naresh-Devulapally-resume-genai.pdf</span>
+    </div>
+  </object>
+
+  <div class="mobile">
+    <p>Resumes read poorly on a phone screen. Open the PDF in your reader instead.</p>
+    <a class="btn btn-primary" href="/Naresh-Devulapally-resume-genai.pdf" download>Download the PDF</a>
+    <a class="btn" href="/Naresh-Devulapally-resume-genai.pdf" target="_blank" rel="noopener noreferrer">Open in a new tab</a>
+    <span class="file">Naresh-Devulapally-resume-genai.pdf</span>
+  </div>
+</main>
+
+</body>
+</html>

@@ -36,6 +36,21 @@
   color: white;
 }
 
+/* Resume is the only link in this row a recruiter is meant to act on, so it
+   does not share the blue of the three navigation links beside it. The accent
+   is defined per theme because a dark burnt orange is unreadable on the dark
+   ground and the light orange is washed out on the light one. */
+.nav-links a.nav-resume {
+  border-color: var(--resume-accent, #C2410C);
+  color: var(--resume-accent, #C2410C);
+  font-weight: 600;
+}
+
+.nav-links a.nav-resume:hover {
+  background-color: var(--resume-accent, #C2410C);
+  color: var(--resume-accent-on, #ffffff);
+}
+
 .news-scroll {
   max-height: 18rem;
   overflow-y: auto;
@@ -435,6 +450,8 @@ html[data-theme="dark"] .bd-content div.cell_output img {
     --text-primary: #f1f1f1;
     --text-secondary: #cccccc;
     --button-border: #79b8ff;
+    --resume-accent: #FB923C;
+    --resume-accent-on: #14181d;
     --link-color: #79b8ff;
     --entry-divider-color: #444;
   }
@@ -443,6 +460,8 @@ html[data-theme="dark"] .bd-content div.cell_output img {
     --text-primary: #1a1a1a;
     --text-secondary: #444;
     --button-border: #2F73C0;
+    --resume-accent: #C2410C;
+    --resume-accent-on: #ffffff;
     --link-color: #2F73C0;
     --entry-divider-color: #ddd;
   }
