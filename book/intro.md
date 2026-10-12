@@ -13,7 +13,7 @@ I am a PhD candidate in Computer Science and Engineering at the University at Bu
 
 ```{admonition} Currently on the job market
 :class: important
-I am actively looking for **postdoctoral** and **research scientist** positions starting **February 2027**. Please email me at <a href="mailto:devulapa@buffalo.edu">devulapa@buffalo.edu</a> or <a href="mailto:devulapally.phd@gmail.com">devulapally.phd@gmail.com</a>.
+I am actively looking for **postdoctoral** and **research scientist** positions starting **December 2026**. Please email me at <a href="mailto:devulapa@buffalo.edu">devulapa@buffalo.edu</a> or <a href="mailto:devulapally.phd@gmail.com">devulapally.phd@gmail.com</a>.
 
 <div class="ie-cols">
   <div>
