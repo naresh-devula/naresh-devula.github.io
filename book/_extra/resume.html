@@ -20,6 +20,34 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap">
 
+<script>
+/* A phone cannot render an embedded PDF. iOS Safari shows a single frozen
+   page and Android Chrome shows nothing at all, so the embed below was
+   replaced by a card and the visitor had to tap through to see the resume.
+   A top-level navigation has none of that problem: it hands the file to the
+   OS viewer, which is the best PDF experience on a phone anyway, with native
+   pinch-zoom, scroll and share.
+
+   Gated on pointer:coarse as well as size, so narrowing a desktop window
+   keeps the desktop behaviour instead of bouncing to the raw file. The
+   landscape clause catches phones held sideways, which are wider than 760px.
+   location.replace, not href, so Back returns where the visitor came from
+   rather than landing here and redirecting again. ?stay=1 escapes it.
+
+   No #zoom= here on purpose: a mobile viewer fits to width by default, which
+   is right on a small screen; 150% is a desktop-only choice. */
+(function () {
+  try {
+    var phone = window.matchMedia(
+      '(pointer: coarse) and (max-width: 760px),' +
+      '(pointer: coarse) and (max-height: 480px)').matches;
+    if (phone && !/[?&]stay=1/.test(location.search)) {
+      location.replace('/Naresh-Devulapally-resume-genai.pdf');
+    }
+  } catch (e) { /* no matchMedia: the card below is the fallback */ }
+})();
+</script>
+
 <style>
 /* This page is served verbatim from book/_extra, outside the Sphinx theme, so
    it carries its own tokens rather than inheriting _static/color.css. The two
@@ -169,7 +197,7 @@ body {
 
 /* Phones and small tablets render embedded PDFs unreliably (iOS Safari shows
    a single page or nothing at all), so the download card is served instead. */
-@media (max-width: 760px), (max-height: 420px) {
+@media (max-width: 760px), (max-height: 480px) {
   .viewer object { display: none; }
   .viewer { display: flex; }
   .viewer .mobile {
@@ -236,7 +264,7 @@ body {
   </object>
 
   <div class="mobile">
-    <p>Resumes read poorly on a phone screen. Open the PDF in your reader instead.</p>
+    <p>Open the resume in your PDF viewer.</p>
     <a class="btn btn-primary" href="/Naresh-Devulapally-resume-genai.pdf" download>Download the PDF</a>
     <a class="btn" href="/Naresh-Devulapally-resume-genai.pdf" target="_blank" rel="noopener noreferrer">Open in a new tab</a>
     <span class="file">Naresh-Devulapally-resume-genai.pdf</span>
