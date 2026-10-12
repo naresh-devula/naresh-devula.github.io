@@ -383,7 +383,7 @@ Received the <a href="https://arc.net/l/quote/fxgsjydt">CSE Graduate Teaching Aw
   <a href="https://github.com/naresh-devula" style="color: green;">
     <i class="fa-brands fa-github"></i>
   </a>
-  <a href="https://www.linkedin.com/in/nareshdevulapally" style="color: #0A66C2;">
+  <a href="https://www.linkedin.com/in/naresh-devula" style="color: #0A66C2;">
     <i class="fa-brands fa-linkedin"></i>
   </a>
   <span class="visitor-orb" id="visitor-orb"></span>
